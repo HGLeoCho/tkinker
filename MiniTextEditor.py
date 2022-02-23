@@ -1,4 +1,3 @@
-from mimetypes import init
 import os
 from tkinter import *
 from tkinter import filedialog, colorchooser, font
@@ -98,7 +97,7 @@ frame.grid()
 color_button = Button(frame, text='color', command=change_color)
 color_button.grid(row=0, column=0)
 
-font_box = OptionMenu(frame, font_name, *font.families(), command=change_font)
+font_box = OptionMenu(frame, font_name, *font.families(), command=change_font) # *font.families() call all list of fonts registered on Windows
 font_box.grid(row=0, column=1)
 
 size_box = Spinbox(frame, from_=1, to=100, textvariable=font_size, command=change_font)
